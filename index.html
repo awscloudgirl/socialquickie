@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SocialQuickie — Prototype</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1 class="brand">SocialQuickie</h1>
+        <nav class="nav">
+          <a href="#" class="nav-link">Docs</a>
+          <a href="#" class="nav-link">Examples</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <section class="panel">
+        <h2>Create a page</h2>
+
+        <div class="tabs">
+          <button class="tab tab--active">Product</button>
+          <button class="tab">Email Signup</button>
+          <button class="tab">Booking</button>
+          <button class="tab">Affiliate</button>
+          <button class="tab">Mini Blog</button>
+        </div>
+
+        <form class="form">
+          <label class="label">Page Title
+            <input class="input" type="text" placeholder="e.g., Black Abaya Launch" />
+          </label>
+
+          <label class="label">Subtitle / Tagline
+            <input class="input" type="text" placeholder="Elegant. Modest. Timeless." />
+          </label>
+
+          <label class="label">Description
+            <textarea class="textarea" rows="4" placeholder="Short description..."></textarea>
+          </label>
+
+          <div class="grid-2">
+            <label class="label">Price (USD)
+              <input class="input" type="number" placeholder="e.g., 49" />
+            </label>
+            <label class="label">CTA Text
+              <input class="input" type="text" placeholder="Buy Now" />
+            </label>
+          </div>
+
+          <label class="label">CTA Link (Stripe/Gumroad/PayPal)
+            <input class="input" type="url" placeholder="https://yourcheckoutlink.com" />
+          </label>
+
+          <label class="label">Hero Image URL
+            <input class="input" type="url" placeholder="https://example.com/image.jpg" />
+          </label>
+
+          <div class="grid-2">
+            <label class="label">Theme
+              <select class="input">
+                <option value="modern">Modern</option>
+                <option value="noor">Noor</option>
+                <option value="oasis">Oasis</option>
+              </select>
+            </label>
+
+            <label class="label">Slug (URL)
+              <input class="input" type="text" placeholder="my-offer-1" />
+            </label>
+          </div>
+
+          <button class="btn-primary" type="button">Preview</button>
+          <button class="btn-secondary" type="button">Save (later)</button>
+        </form>
+      </section>
+
+      <aside class="panel preview">
+        <div class="phone">
+          <img class="hero" src="https://images.unsplash.com/photo-1503342217505-b0a15cf70489?q=80&w=1200&auto=format&fit=crop" alt="Hero" />
+          <h1 class="title">Black Abaya Launch</h1>
+          <p class="subtitle">Elegant. Modest. Timeless.</p>
+          <p class="desc">Short description for your page goes here.</p>
+          <div class="price">$49.00</div>
+          <a class="cta" href="#">Buy Now</a>
+          <p class="watermark">Made with SocialQuickie</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div class="container small">
+        © <span id="year"></span> SocialQuickie — prototype
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
