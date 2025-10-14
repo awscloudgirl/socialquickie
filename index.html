@@ -16,12 +16,11 @@
           <a href="#">Home</a>
           <a href="#">Templates</a>
           <a href="#">Dashboard</a>
-          <a href="#">Pricing</a>
         </nav>
       </div>
     </header>
 
-    <!-- Main Section -->
+    <!-- Hero Section -->
     <main>
       <section class="hero">
         <h2>Build one-page sites in seconds</h2>
@@ -29,6 +28,36 @@
         <button>Create Your Page</button>
       </section>
 
+      <!-- Page Builder Form -->
+      <section class="builder">
+        <h2>Create your quick landing page</h2>
+
+        <form id="pageForm">
+          <label>
+            Page Title:
+            <input type="text" id="title" placeholder="My Product Launch" required />
+          </label>
+
+          <label>
+            Description:
+            <input type="text" id="subtitle" placeholder="A short catchy sentence" required />
+          </label>
+
+          <label>
+            Button Text:
+            <input type="text" id="ctaText" placeholder="Buy Now" />
+          </label>
+
+          <label>
+            Button Link:
+            <input type="url" id="ctaLink" placeholder="https://example.com" />
+          </label>
+
+          <button type="submit">Generate Page</button>
+        </form>
+      </section>
+
+      <!-- Live Preview -->
       <section class="preview">
         <h3>Live Preview</h3>
         <div class="preview-box">
@@ -41,5 +70,8 @@
     <footer>
       <p>© 2025 SocialQuickie. Built with ❤️ by Bianca.</p>
     </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
   </body>
 </html>
