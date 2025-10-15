@@ -1,11 +1,9 @@
 // testAuth.js
-import { supabase } from './lib/supabaseClient.js'
+import { supabase } from './lib/supabaseClient.node.js'
 
-// set a test email you control (you'll get a confirmation email if email confirmations are enabled)
-const TEST_EMAIL = 'thatoffgridlife@gmail.com'
+const TEST_EMAIL = 'helloworld@gmail.com'
 const TEST_PASSWORD = 'password123'
 
-// run ONE at a time. Start with signUp(), then comment it and run signIn().
 async function signUp() {
   const { data, error } = await supabase.auth.signUp({
     email: TEST_EMAIL,
@@ -24,5 +22,6 @@ async function signIn() {
   console.log('Login error:', error)
 }
 
-await signUp()
-await signIn()
+// Run ONE at a time:
+// await signUp()
+ await signIn()
