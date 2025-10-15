@@ -20,65 +20,69 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <main>
-      <section class="hero">
-        <h2>Build one-page sites in seconds</h2>
-        <p>Create social-media landing pages that convert — no code needed.</p>
-        <button>Create Your Page</button>
-      </section>
+    <main id="app">
+      <!-- Home View -->
+      <div id="homeView">
+        <section class="hero">
+          <h2>Build one-page sites in seconds</h2>
+          <p>Create social-media landing pages that convert — no code needed.</p>
+          <button>Create Your Page</button>
+        </section>
 
-      <!-- Page Builder Form -->
-      <section class="builder">
-        <h2>Create your quick landing page</h2>
+        <!-- Builder -->
+        <section class="builder">
+          <h2>Create your quick landing page</h2>
+          <form id="pageForm">
+            <label>
+              Page Title:
+              <input type="text" id="title" placeholder="My Product Launch" required />
+            </label>
+            <label>
+              Description:
+              <input type="text" id="subtitle" placeholder="A short catchy sentence" required />
+            </label>
+            <label>
+              Button Text:
+              <input type="text" id="ctaText" placeholder="Buy Now" />
+            </label>
+            <label>
+              Button Link:
+              <input type="url" id="ctaLink" placeholder="https://example.com" />
+            </label>
+            <button type="submit">Generate Page</button>
+          </form>
+        </section>
 
-        <form id="pageForm">
-          <label>
-            Page Title:
-            <input type="text" id="title" placeholder="My Product Launch" required />
-          </label>
+        <!-- Live Preview -->
+        <section class="preview">
+          <h3>Live Preview</h3>
+          <div class="preview-box">
+            <p>Your preview will appear here.</p>
+          </div>
+        </section>
 
-          <label>
-            Description:
-            <input type="text" id="subtitle" placeholder="A short catchy sentence" required />
-          </label>
+        <!-- Dashboard -->
+        <section class="dashboard">
+          <h3>🗂 My Pages</h3>
+          <ul id="pageList" class="page-list">
+            <li class="empty">No pages saved yet. Create your first one above 👆</li>
+          </ul>
+        </section>
+      </div>
 
-          <label>
-            Button Text:
-            <input type="text" id="ctaText" placeholder="Buy Now" />
-          </label>
-
-          <label>
-            Button Link:
-            <input type="url" id="ctaLink" placeholder="https://example.com" />
-          </label>
-
-          <button type="submit">Generate Page</button>
-        </form>
-      </section>
-
-      <!-- Live Preview -->
-      <section class="preview">
-        <h3>Live Preview</h3>
-        <div class="preview-box">
-          <p>Your preview will appear here.</p>
+      <!-- Page View -->
+      <div id="pageView" style="display: none;">
+        <div id="pageContent"></div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <button id="backBtn">← Back to Dashboard</button>
         </div>
-      </section>
-      <!-- Dashboard -->
-      <section class="dashboard">
-       <h3>🗂 My Pages</h3>
-       <ul id="pageList">
-        <li>No pages saved yet.</li>
-       </ul>
-      </section>
+      </div>
     </main>
 
-    <!-- Footer -->
     <footer>
       <p>© 2025 SocialQuickie. Built with ❤️ by Bianca.</p>
     </footer>
 
-    <!-- Script -->
     <script src="script.js"></script>
   </body>
 </html>

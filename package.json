@@ -1,0 +1,16 @@
+{
+  "name": "socialquickie",
+  "version": "1.0.0",
+  "description": "SocialQuickie – One-page social landing page generator",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node testAuth.js"
+  },
+  "author": "Bianca",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.75.0",
+    "dotenv": "^17.2.3"
+  }
+}
