@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | SocialQuickie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="bg-white shadow-lg rounded-xl p-8 w-96">
+    <h1 class="text-2xl font-bold text-center mb-4">SocialQuickie</h1>
+    <p class="text-gray-500 text-center mb-6">Sign up or log in below</p>
+
+    <form id="auth-form" class="space-y-4">
+      <input type="email" id="email" placeholder="Email" required
+             class="w-full border rounded p-2" />
+      <input type="password" id="password" placeholder="Password" required
+             class="w-full border rounded p-2" />
+
+      <!-- ✅ Prevent auto-submit -->
+      <button type="button" id="signup" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Sign Up</button>
+      <button type="button" id="login"  class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">Log In</button>
+    </form>
+
+    <p id="message" class="text-center mt-4 text-sm text-gray-600"></p>
+  </div>
+
+  <script type="module" src="./auth.js"></script>
+</body>
+</html>
