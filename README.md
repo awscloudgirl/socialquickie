@@ -75,6 +75,6 @@ Users can:
 - Phases **B1–B5** focus on converting it into a **full dynamic web app** using Next.js, Tailwind, and Supabase.  
 - Phases **B6–B7** finalize the **SaaS product layer** with payments and deployment.
 
----
+----
 
 > 💬 Follow the commits to see how SocialQuickie evolves from prototype to full application.
