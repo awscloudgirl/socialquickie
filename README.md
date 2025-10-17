@@ -55,25 +55,26 @@ Users can:
 ## 🗓️ Build Plan
 
 | Phase | Focus | Description |
-|-------|--------|-------------|
-| A1 | HTML + CSS | Build static layout |
-| A2 | JavaScript | Add live preview interactions |
-| A3 | Templates | Add multiple page types |
-| B1 | Next.js | Convert to full app |
-| B2 | Supabase | Database + backend |
-| B3 | Stripe | Payments and checkout |
+|:------|:------|:-------------|
+| **A1** | HTML + CSS | Build static layout |
+| **A2** | JavaScript | Add live preview interactions |
+| **A3** | Templates | Add multiple page types |
+| **B1** | Next.js | Convert static prototype into full React/Next.js app |
+| **B2** | Supabase Auth | Add authentication (signup, login, session handling) |
+| **B3** | Supabase Database | Connect to Supabase backend (user data, CRUD setup) |
+| **B4** | Dashboard UI | Create frontend dashboard (Tailwind, session persist, logout) |
+| **B5** | User Profiles | Build editable user profiles with RLS and Supabase `profiles` table |
+| **B6** | Stripe & Payments | Integrate Stripe + PayPal for payments and checkout |
+| **B7** | Deployment | Deploy live app via Vercel, Supabase, and Stripe live keys |
 
 ---
 
-## 👩🏽‍💻 Author
+### 📘 Notes
 
-**Bianca @awscloudgirl**  
-Bootcamp student learning web development by building real, usable tools.
+- Phases **A1–A3** cover the static front-end prototype (HTML, CSS, JavaScript).  
+- Phases **B1–B5** focus on converting it into a **full dynamic web app** using Next.js, Tailwind, and Supabase.  
+- Phases **B6–B7** finalize the **SaaS product layer** with payments and deployment.
 
 ---
-
-## 🧠 Notes
-
-This repository documents the journey of turning an idea into a functional micro-SaaS web app — covering the essentials of HTML, CSS, JavaScript, Next.js, Tailwind, and Supabase integration.
 
 > 💬 Follow the commits to see how SocialQuickie evolves from prototype to full application.
