@@ -9,34 +9,88 @@
 <body class="bg-gray-100 flex items-center justify-center h-screen">
 
   <div class="bg-white p-8 rounded-xl shadow-lg w-96 text-center">
-    <h1 class="text-2xl font-bold mb-4">Welcome to your Dashboard 🎉</h1>
+    <h1 class="text-2xl font-bold mb-4">Welcome 🎉</h1>
     <p id="user-email" class="text-gray-700 mb-6"></p>
-    <button id="logout" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Log Out</button>
+
+    <div id="profile-section" class="space-y-3 text-left">
+      <label class="block text-sm font-medium text-gray-600">Username</label>
+      <input id="username" class="w-full border rounded p-2" placeholder="Your username" />
+
+      <label class="block text-sm font-medium text-gray-600">Bio</label>
+      <textarea id="bio" class="w-full border rounded p-2" placeholder="Write something..."></textarea>
+
+      <button id="save-profile"
+              class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+        Save Profile
+      </button>
+    </div>
+
+    <button id="logout"
+            class="mt-4 w-full bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+      Log Out
+    </button>
   </div>
 
+  <!-- Supabase logic -->
   <script type="module">
     import { supabase } from './lib/supabaseClient.js'
 
+    // ✅ Step 1: Check logged-in user
     async function checkUser() {
-      // ✅ Wait for Supabase to load any existing session
       const { data: { user } } = await supabase.auth.getUser()
-
       if (!user) {
-        console.log('No user session found, redirecting...')
         window.location.href = './auth.html'
-      } else {
-        console.log('User session found:', user.email)
-        document.getElementById('user-email').textContent = `Logged in as ${user.email}`
+        return
+      }
+      document.getElementById('user-email').textContent = `Logged in as ${user.email}`
+      loadProfile(user.id)
+    }
+
+    // ✅ Step 2: Load user profile
+    async function loadProfile(userId) {
+      const { data, error } = await supabase
+        .from('profiles')
+        .select()
+        .eq('id', userId)
+        .single()
+
+      if (error) {
+        console.error('Error loading profile:', error)
+      } else if (data) {
+        document.getElementById('username').value = data.username || ''
+        document.getElementById('bio').value = data.bio || ''
       }
     }
 
+    // ✅ Step 3: Save / Update profile
+    document.getElementById('save-profile').addEventListener('click', async () => {
+      const { data: { user } } = await supabase.auth.getUser()
+      const username = document.getElementById('username').value
+      const bio = document.getElementById('bio').value
+
+      const { error } = await supabase.from('profiles').upsert({
+        id: user.id,
+        username,
+        bio,
+        updated_at: new Date()
+      })
+
+      if (error) {
+        console.error('Error saving profile:', error)
+        alert('❌ Failed to save profile')
+      } else {
+        alert('✅ Profile saved!')
+      }
+    })
+
+    // ✅ Step 4: Logout
     document.getElementById('logout').addEventListener('click', async () => {
       await supabase.auth.signOut()
       window.location.href = './auth.html'
     })
 
+    // ✅ Step 5: Run on load
     checkUser()
   </script>
-
 </body>
 </html>
