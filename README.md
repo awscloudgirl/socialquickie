@@ -87,7 +87,9 @@ Users can:
 | **B3** | Supabase Database | Connect backend (user data, CRUD setup) |
 | **B4** | Dashboard UI | Add Tailwind dashboard + session persistence |
 | **B5** | User Profiles | Add editable profiles with RLS & Supabase `profiles` table |
-| **C1** | Payments + Downloads | Stripe & PayPal checkout, Supabase digital delivery |
+| **B6** | Products & Orders | Create Supabase tables and RLS for e-commerce foundation |
+| **B7** | Payments Integration | Add Stripe + PayPal checkout and connect with Supabase orders |
+| **C1** | Landing Page Builder | Allow users to build, edit, and preview landing pages dynamically |
 | **C2** | Email Marketing | Integrate ActiveCampaign, AWeber, GetResponse via API |
 | **C3** | AI Copy Suggestions | Use OpenAI to generate landing page copy (headlines, CTAs, descriptions) |
 | **C4** | Meta Integration | Add Meta Pixel + IG/FB comment auto-DM functionality |
