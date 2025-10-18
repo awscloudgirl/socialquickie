@@ -1,14 +1,39 @@
 {
   "name": "socialquickie",
   "version": "1.0.0",
-  "description": "Supabase Auth Test - Day B3",
-  "main": "testAuth.js",
-  "type": "module",
+  "private": true,
+  "description": "SocialQuickie – Instant micro-landing page builder with payments, Supabase, and integrations.",
   "scripts": {
-    "start": "node testAuth.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.46.1",
-    "dotenv": "^17.2.3"
-  }
+    "@supabase/supabase-js": "^2.43.3",
+    "next": "^14.2.0",
+    "paypal-rest-sdk": "^1.8.1",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "stripe": "^14.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  },
+  "keywords": [
+    "nextjs",
+    "supabase",
+    "stripe",
+    "paypal",
+    "tailwind",
+    "micro-saas",
+    "landing-pages",
+    "socialquickie"
+  ],
+  "author": "Haneefah <awscloudgirl>",
+  "license": "MIT"
 }

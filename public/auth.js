@@ -1,5 +1,5 @@
 // public/auth.js
-import { supabase } from './lib/supabaseClient.js'
+import { supabase } from '../lib/supabaseClient.js'
 
 const signupBtn = document.getElementById('signup')
 const loginBtn = document.getElementById('login')
